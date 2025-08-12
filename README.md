@@ -17,14 +17,13 @@ conda activate YOLOv5-Socket
 b. Install PyTorch and torchvision following the [official instructions](https://pytorch.org/), *e.g.*,
 
 ```shell
-# CUDA 10.2
-pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 –f https://download.pytorch.org/whl/torch_stable.html
+# CUDA 11.8
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu118
 
-# CUDA 11.3
-- pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
-```
+# CUDA 12.1
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
 
-# **Acknowledgements**
+## **Acknowledgements**
 
 This code is built upon YOLOv5.
 
