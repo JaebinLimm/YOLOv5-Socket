@@ -36,8 +36,6 @@ pip install -r requirements.txt
 The pre-trained model can be found [here](https://github.com/ultralytics/yolov5). You can test the model by running the command below.
 
 ```shell
-conda activate YOLOv5-Socket
-
 python socket_server.py
 python client.py
 # Run socket_server.py first, then client.py.
