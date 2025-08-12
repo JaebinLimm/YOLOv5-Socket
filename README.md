@@ -27,6 +27,8 @@ pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https
 c. Install required packages
 
 ```shell
+git clone https://github.com/JaebinLimm/YOLOv5-Socket.git
+cd YOLOv5-Socket
 pip install -r requirements.txt
 ```
 
@@ -34,9 +36,6 @@ pip install -r requirements.txt
 The pre-trained model can be found [here](https://github.com/ultralytics/yolov5). You can test the model by running the command below.
 
 ```shell
-git clone https://github.com/JaebinLimm/YOLOv5-Socket.git
-cd YOLOv5-Socket
-
 conda activate YOLOv5-Socket
 
 python socket_server.py
