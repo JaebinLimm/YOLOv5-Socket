@@ -3,7 +3,7 @@
 ## **Environment**
 - python >= 3.8.0
 - pytorch >= 1.8
-- CUDA 10.2+
+- CUDA 11.8+
 
 ## **Install**
 
