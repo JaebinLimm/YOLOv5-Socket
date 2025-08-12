@@ -32,7 +32,7 @@ cd YOLOv5-Socket
 pip install -r requirements.txt
 ```
 
-## **Inference**
+## **Quick Start**
 The pre-trained model can be found [here](https://github.com/ultralytics/yolov5). You can test the model by running the command below.
 
 ```shell
