@@ -22,6 +22,7 @@ def index():
     return app.send_static_file('websocket_client.html')
 
 if __name__ == '__main__':
-    print("WebSocket server is running (http://<server IP>:5010)")
-    socketio.run(app, host='0.0.0.0', port=5010)
+    print("WebSocket server is running (http://<server IP>:5000)")
+    socketio.run(app, host='0.0.0.0', port=5000)
+
 
