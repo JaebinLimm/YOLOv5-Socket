@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>YOLO Real-Time Detection Results</title>
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  #img { max-width: 600px; border: 1px solid #ccc; }
+  #info { margin-top: 10px; }
+</style>
+</head>
+<body>
+<h2>YOLO Real-Time Detection Results</h2>
+<img id="img" src="" alt="YOLO Detection Image" />
+<div id="info">
+  <p>Label: <span id="label"></span></p>
+  <p>Time: <span id="time"></span></p>
+</div>
+
+<script>
+  const socket = io('http://localhost:5000');
+
+  socket.on('connect', () => {
+    console.log('Connected to the server.');
+  });
+
+  socket.on('detection_result', data => {
+    // data = { image: base64string, label: "label", time: "time" }
+    document.getElementById('img').src = 'data:image/jpeg;base64,' + data.image;
+    document.getElementById('label').innerText = data.label;
+    document.getElementById('time').innerText = data.time;
+  });
+
+  socket.on('disconnect', () => {
+    console.log('Server connection has been lost.');
+  });
+</script>
+</body>
+</html>
