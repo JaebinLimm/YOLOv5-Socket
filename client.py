@@ -3,6 +3,7 @@ import os
 import socketio
 import base64
 import yolo_detect
+import webbrowser
 from utils.dataloaders import LoadStreams
 from opt import parse_opt
 from models.common import DetectMultiBackend
@@ -12,6 +13,7 @@ from pathlib import Path
 
 sio = socketio.Client()
 opt = parse_opt()
+sio.connect('http://localhost:5010')
 
 device = select_device(opt.device)
 
@@ -52,3 +54,4 @@ while True:
     label = str(yolo_result[2])
 
     send_detection(yolo_result[0], time, label)
+
