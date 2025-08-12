@@ -14,7 +14,7 @@ from pathlib import Path
 opt = parse_opt()
 
 sio = socketio.Client()
-sio.connect('http://localhost:5010')
+sio.connect('http://localhost:5000')
 
 device = select_device(opt.device)
 
@@ -36,7 +36,7 @@ def connect():
 def disconnect():
     print("Disconnected from the server.")
 
-sio.connect('http://localhost:5010')
+sio.connect('http://localhost:5000')
 
 def send_detection(image, label, timestamp):
 
@@ -55,5 +55,6 @@ while True:
     label = str(yolo_result[2])
 
     send_detection(yolo_result[0], time, label)
+
 
 
