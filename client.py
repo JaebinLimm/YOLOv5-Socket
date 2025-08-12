@@ -33,7 +33,7 @@ def connect():
 def disconnect():
     print("Disconnected from the server.")
 
-sio.connect('http://localhost:5000')
+sio.connect('http://localhost:5010')
 
 def send_detection(image, label, timestamp):
 
@@ -50,4 +50,5 @@ while True:
     yolo_result = yolo_detect.main(opt, cam, model, save_dir, csv_path)
     time = str(yolo_result[1])
     label = str(yolo_result[2])
+
     send_detection(yolo_result[0], time, label)
