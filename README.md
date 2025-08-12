@@ -41,6 +41,8 @@ python client.py
 # Run socket_server.py and client.py sequentially.
 ```
 
+If you have any questions, please feel free to contact the writer at rkfakehd112@gmail.com.
+
 ## **References**
 
 I referenced the repo below for the code.
