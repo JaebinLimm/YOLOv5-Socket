@@ -3,7 +3,6 @@ import os
 import socketio
 import base64
 import yolo_detect
-import webbrowser
 from utils.dataloaders import LoadStreams
 from opt import parse_opt
 from models.common import DetectMultiBackend
@@ -11,10 +10,8 @@ from utils.torch_utils import select_device
 from utils.general import increment_path
 from pathlib import Path
 
-opt = parse_opt()
-
 sio = socketio.Client()
-sio.connect('http://localhost:5000')
+opt = parse_opt()
 
 device = select_device(opt.device)
 
@@ -53,8 +50,4 @@ while True:
     yolo_result = yolo_detect.main(opt, cam, model, save_dir, csv_path)
     time = str(yolo_result[1])
     label = str(yolo_result[2])
-
     send_detection(yolo_result[0], time, label)
-
-
-
