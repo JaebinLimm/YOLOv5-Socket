@@ -19,7 +19,7 @@ def parse_opt():
     parser.add_argument("--conf-thres", type=float, default=0.5, help="confidence threshold")
     parser.add_argument("--iou-thres", type=float, default=0.45, help="NMS IoU threshold")
     parser.add_argument("--max-det", type=int, default=1000, help="maximum detections per image")
-    parser.add_argument("--device", default="", type=str, help="cuda device, i.e. 0 or 0,1,2,3 or cpu")
+    parser.add_argument("--device", default="0", type=str, help="cuda device, i.e. 0 or 0,1,2,3 or cpu")
     parser.add_argument("--view-img", default="True", action="store_true", help="show results")
     parser.add_argument("--save-txt", action="store_true", help="save results to *.txt")
     parser.add_argument(
@@ -50,4 +50,5 @@ def parse_opt():
     opt = parser.parse_args()
     opt.imgsz *= 2 if len(opt.imgsz) == 1 else 1  # expand
     print_args(vars(opt))
+
     return opt
