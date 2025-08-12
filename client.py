@@ -11,8 +11,9 @@ from utils.torch_utils import select_device
 from utils.general import increment_path
 from pathlib import Path
 
-sio = socketio.Client()
 opt = parse_opt()
+
+sio = socketio.Client()
 sio.connect('http://localhost:5010')
 
 device = select_device(opt.device)
@@ -54,4 +55,5 @@ while True:
     label = str(yolo_result[2])
 
     send_detection(yolo_result[0], time, label)
+
 
