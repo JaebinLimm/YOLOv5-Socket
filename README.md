@@ -40,7 +40,7 @@ conda activate YOLOv5-Socket
 
 python socket_server.py
 python client.py
-# Run socket_server.py and client.py sequentially.
+# Run socket_server.py first, then client.py.
 ```
 
 If you have any questions, please feel free to contact the writer at rkfakehd112@gmail.com.
