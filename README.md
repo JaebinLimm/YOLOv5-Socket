@@ -5,7 +5,7 @@
 - pytorch >= 1.8
 - CUDA 11.8+
 
-## **Installation **
+## **Installation**
 
 a. Create a conda virtual environment and activate it.
 
