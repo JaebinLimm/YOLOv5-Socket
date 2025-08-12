@@ -38,6 +38,7 @@ The pre-trained model can be found [here](https://github.com/ultralytics/yolov5)
 ```shell
 python socket_server.py
 python client.py
+# Please run socket_server.py and client.py in separate terminal windows.
 # Run socket_server.py first, then client.py.
 ```
 
