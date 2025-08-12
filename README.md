@@ -37,8 +37,8 @@ The pre-trained model can be found [here](https://github.com/ultralytics/yolov5)
 conda activate YOLOv5-Socket
 
 python socket_server.py
-
 python client.py
+# Run socket_server.py and client.py sequentially.
 ```
 
 ## **References**
