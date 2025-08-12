@@ -30,7 +30,8 @@ c. Install required packages
 pip install -r requirements.txt
 ```
 
-## **Acknowledgements**
+## **References**
 
-This code is built upon YOLOv5.
+I referenced the repo below for the code.
+- [YOLOv5](https://github.com/ultralytics/yolov5).
 
