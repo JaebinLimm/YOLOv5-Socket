@@ -39,7 +39,7 @@ The pre-trained model can be found [here](https://github.com/ultralytics/yolov5)
 python socket_server.py
 python client.py
 # Please run socket_server.py and client.py in separate terminal windows.
-# Run socket_server.py first, then client.py.
+# Make sure to start socket_server.py before running client.py.
 ```
 
 If you have any questions, please feel free to contact the writer at rkfakehd112@gmail.com.
